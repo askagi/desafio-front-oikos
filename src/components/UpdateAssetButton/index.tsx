@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { Button, Form, InputGroup, Modal, Stack } from "react-bootstrap";
+import { Button, Form, Modal, Stack } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { priceFormatter, priceFormatterInput } from "../../utils/formatter";
-import { yupResolver } from '@hookform/resolvers/yup';
+// import { yupResolver } from '@hookform/resolvers/yup';
+import { BsPencilSquare } from "react-icons/bs";
 import * as yup from 'yup';
 import { pt } from 'yup-locales';
 import { useAssets } from "../../hooks/useAssets";
-import { Assets, UpdateAssetInput } from "../../hooks/useAssets/useAssetsProvider";
-import { BsPencilSquare } from "react-icons/bs";
+import { UpdateAssetInput } from "../../hooks/useAssets/useAssetsProvider";
 
 yup.setLocale(pt);
 
@@ -28,8 +28,6 @@ export function UpdateAssetButton({ asset }: Props) {
     function handleShow() {
         setShow(true);
     };
-
-
 
     const newAssetSchema = yup.object({
         company: yup.string().required('Campo obrigatório'),

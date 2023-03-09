@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { assetsData } from "../../data/assetsData";
 import { api } from "../../services/api";
 
 export interface Assets {
@@ -14,7 +13,6 @@ export interface Assets {
         unitPrice: number;
     }
 }
-
 
 export interface CreateAssetInput {
     company: string;
@@ -44,7 +42,6 @@ export interface AssetsModal {
     target?: "AssetsDetail";
     assets?: Assets;
 }
-
 
 export function useAssetsProvider() {
     const [assets, setAssets] = useState<Assets[]>([]);

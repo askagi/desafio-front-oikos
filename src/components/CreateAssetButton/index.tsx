@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button, Form, Modal, Stack } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { BsPlusSquare } from "react-icons/bs";
 import * as yup from 'yup';
-import { yupResolver } from "@hookform/resolvers/yup";
+// import { yupResolver } from "@hookform/resolvers/yup";
 import { pt } from 'yup-locales';
 import { useAssets } from "../../hooks/useAssets";
 import { priceFormatterInput } from "../../utils/formatter";

@@ -1,15 +1,13 @@
-import { useEffect } from "react";
-import { Badge, Card, Container, Pagination, Table } from "react-bootstrap";
+import { Badge, Card, Pagination, Table } from "react-bootstrap";
 import { useAssets } from "../../hooks/useAssets";
 import { Assets } from "../../hooks/useAssets/useAssetsProvider";
 import { priceFormatter } from "../../utils/formatter";
 import { AssetsDetail } from "../AssetsDetail";
 import { DeleteAssetButton } from "../DeleteAssetButton";
-import { Load } from "../Load";
 import { UpdateAssetButton } from "../UpdateAssetButton";
 
 export function AssetsTable() {
-    const { assets, setAssetsModal, isLoading, fetchAssets } = useAssets();
+    const { assets, setAssetsModal } = useAssets();
 
     function handleOpenAssetsDetails(assets: Assets) {
         setAssetsModal({

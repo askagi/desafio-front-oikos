@@ -1,15 +1,13 @@
 import { Suspense } from "react"
 import { ToastContainer } from "react-toastify"
-import { Load } from "../components/Load"
 import { AssetsProvider } from "../contexts/AssetsContext"
 import { MyRoutes } from "./router"
-// import '../styles/main.scss'
 
 export function App() {
 
 
   return (
-    <Suspense fallback={<Load />}>
+    <Suspense fallback={<h1>Loading...</h1>}>
       <AssetsProvider>
         <MyRoutes />
         <ToastContainer
