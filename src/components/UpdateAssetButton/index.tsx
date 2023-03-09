@@ -29,7 +29,6 @@ export function UpdateAssetButton({ asset }: Props) {
         setShow(true);
     };
 
-    console.log(asset);
 
 
     const newAssetSchema = yup.object({

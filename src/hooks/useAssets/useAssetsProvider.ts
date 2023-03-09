@@ -45,8 +45,6 @@ export interface AssetsModal {
     assets?: Assets;
 }
 
-console.log(assetsData);
-
 
 export function useAssetsProvider() {
     const [assets, setAssets] = useState<Assets[]>([]);

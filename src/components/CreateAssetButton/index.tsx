@@ -35,13 +35,12 @@ export function CreateAssetButton() {
 
     type NewAssetFormInputs = yup.InferType<typeof newAssetSchema>
 
-    const { register, watch, handleSubmit, setValue, reset, formState: { isValid } } = useForm<NewAssetFormInputs>({
-        resolver: yupResolver(newAssetSchema),
+    const { register, watch, handleSubmit, setValue, reset, formState: { errors } } = useForm<NewAssetFormInputs>({
+        // resolver: yupResolver(newAssetSchema),
     });
 
     function onSubmit(data: NewAssetFormInputs) {
 
-        console.log(data);
 
         if (data.typeAsset === "acao") {
             createAsset({
@@ -177,7 +176,6 @@ export function CreateAssetButton() {
                                     id="floatingUnitPrice"
                                     placeholder="Valor por ação*"
                                     {...register('unitPrice', {
-                                        // valueAsNumber: true,
                                         onChange({ target }) {
                                             setValue("unitPrice", "R$ " + priceFormatterInput(target.value))
                                         },
