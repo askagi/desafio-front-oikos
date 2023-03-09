@@ -1,0 +1,61 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "mixins";
+@import "./components/header.scss";
+@import "./components/navbarCustom.scss";
+@import "./components/updateAssetButton.scss";
+@import "./components/deleteAssetButton.scss";
+@import "./components/assetsTable.scss";
+@import "./components/assetsDetail.scss";
+
+
+body {
+    background-color: $gray-100;
+    font-family: 'Inter', sans-serif;
+}
+
+.modal-content {
+    @include modal
+}
+
+.space-custom {
+    padding-block: 2rem;
+}
+
+.alert-icon-container {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $red-100;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+
+    svg {
+        color: $danger;
+        width: 25.5px;
+        height: 24px;
+    }
+}
+
+.table {
+    tbody {
+        tr:hover {
+            background-color: $blue-100;
+            cursor: pointer;
+
+            td:nth-child(1) {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+*::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    border: 5px solid $gray-500;
+}

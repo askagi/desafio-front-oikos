@@ -1,0 +1,22 @@
+@import "variables";
+
+@mixin modal {
+    padding: 0.5rem 1rem;
+}
+
+@mixin items-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin btn-table {
+    font-weight: 600;
+}
+
+@mixin badge-custom {
+    width: auto;
+    font-weight: 500;
+    color: "#45484B";
+    padding-inline: 0.25rem;
+}

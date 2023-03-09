@@ -1,0 +1,18 @@
+@import "../variables.scss";
+
+.navbar-custom {
+    border-bottom: 1px solid $blue-200;
+
+    svg {
+        width: 24;
+        height: 24;
+        color: $gray-100
+    }
+
+    button {
+
+        strong {
+            color: $gray-100;
+        }
+    }
+}

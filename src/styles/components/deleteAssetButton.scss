@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+.btn-delete {
+    color: $danger;
+    font-weight: 600;
+
+    &:hover {
+        color: $red-600;
+    }
+
+    svg {
+        color: $danger;
+    }
+
+
+}

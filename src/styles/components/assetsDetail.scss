@@ -1,0 +1,11 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.badge-custom {
+    background-color: $gray-200;
+    @include badge-custom;
+
+    &.badge-custom-color {
+        background-color: $blue-100;
+    }
+}
